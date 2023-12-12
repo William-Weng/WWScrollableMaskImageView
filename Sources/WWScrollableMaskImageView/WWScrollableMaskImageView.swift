@@ -54,17 +54,29 @@ open class WWScrollableMaskImageView: UIView {
 // MARK: - 公開工具
 public extension WWScrollableMaskImageView {
     
-    /// 設定Bar圖片設定
+    /// [設定Bar圖片設定](https://ithelp.ithome.com.tw/users/20107329/ironman)
     /// - Parameters:
-    ///   - barImage: UIImage?
-    ///   - contentMode: UIView.ContentMode
-    ///   - barColor: UIColor?
-    func setting(barImage: UIImage?, contentMode: UIView.ContentMode = .scaleAspectFill, barColor: UIColor = .black) {
+    ///   - originalImage: 要看到的圖片
+    ///   - maskImage: 遮罩的圖片
+    ///   - imageContentMode: 圖片的顯示方式
+    ///   - maskViewWidth: 遮罩的寬度位置
+    ///   - barImage: 滑桿的圖片
+    ///   - barContentMode: 滑桿圖片的顯示方式
+    ///   - barColor: 滑桿背景色
+    func setting(originalImage: UIImage?, maskImage: UIImage?, maskViewWidth: CGFloat = 0, imageContentMode: UIView.ContentMode = .scaleAspectFit, barImage: UIImage?, barContentMode: UIView.ContentMode = .scaleAspectFit, barColor: UIColor = .black) {
         
         self.barImage = barImage
         self.barColor = barColor
-        self.barImageView.contentMode = contentMode
+        self.originalImage = originalImage
+        self.maskImage = maskImage
+        self.maskViewWidth = maskViewWidth
+
+        self.originalImageView.contentMode = imageContentMode
+        self.maskImageView.contentMode = imageContentMode
+        self.barImageView.contentMode = barContentMode
+        
         self.setNeedsDisplay()
+        self.layoutIfNeeded()
     }
 }
 
