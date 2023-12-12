@@ -14,15 +14,11 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-        
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         
         let barImage = UIImage(named: "Bar")
         let barNinePngImage = barImage?.resizableImage(withCapInsets: UIEdgeInsets(top: 30, left: 0, bottom: 30, right: 0), resizingMode: .stretch)
         
-        maskView.setting(barImage: barNinePngImage, contentMode: .scaleToFill, color: .clear)
+        maskView.setting(barImage: barNinePngImage, contentMode: .scaleToFill, barColor: .clear)
     }
 }
 

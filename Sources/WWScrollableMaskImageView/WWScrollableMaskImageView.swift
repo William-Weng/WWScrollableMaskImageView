@@ -58,10 +58,13 @@ public extension WWScrollableMaskImageView {
     /// - Parameters:
     ///   - barImage: UIImage?
     ///   - contentMode: UIView.ContentMode
-    func setting(barImage: UIImage?, contentMode: UIView.ContentMode = .scaleAspectFill, color: UIColor = .black) {
-        barImageView.image = barImage
-        barImageView.contentMode = contentMode
-        barImageView.backgroundColor = color
+    ///   - barColor: UIColor?
+    func setting(barImage: UIImage?, contentMode: UIView.ContentMode = .scaleAspectFill, barColor: UIColor = .black) {
+        
+        self.barImage = barImage
+        self.barColor = barColor
+        self.barImageView.contentMode = contentMode
+        self.setNeedsDisplay()
     }
 }
 
