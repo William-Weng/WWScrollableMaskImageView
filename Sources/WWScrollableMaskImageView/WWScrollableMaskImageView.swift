@@ -56,7 +56,7 @@ public extension WWScrollableMaskImageView {
     
     /// [設定Bar圖片設定](https://ithelp.ithome.com.tw/users/20107329/ironman)
     /// - Parameters:
-    ///   - originalImage: 要看到的圖片
+    ///   - originalImage: [要看到的圖片](https://github.com/slamdon/Swift-Layout-Animation-Transition-30days/tree/master)
     ///   - maskImage: 遮罩的圖片
     ///   - imageContentMode: 圖片的顯示方式
     ///   - maskViewWidth: 遮罩的寬度位置
