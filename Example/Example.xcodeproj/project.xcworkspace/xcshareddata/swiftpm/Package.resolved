@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWScrollableMaskImageView",
       "state" : {
-        "revision" : "db8ce845d80a6df0422cfba32333ece8adbdfec9",
-        "version" : "1.0.1"
+        "revision" : "d1c38bc525a1455715cfb6f5f36cbd3d760b456c",
+        "version" : "1.0.3"
       }
     }
   ],

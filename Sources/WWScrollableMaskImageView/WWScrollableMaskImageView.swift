@@ -69,7 +69,7 @@ public extension WWScrollableMaskImageView {
         self.barColor = barColor
         self.originalImage = originalImage
         self.maskImage = maskImage
-        self.maskViewWidth = maskViewWidth
+        self.maskViewWidth = maskViewWidth - barImageView.frame.width
 
         self.originalImageView.contentMode = imageContentMode
         self.maskImageView.contentMode = imageContentMode
